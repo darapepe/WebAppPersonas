@@ -24,15 +24,6 @@ namespace WebAppPersonas
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control TableLogin.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTable TableLogin;
-
-        /// <summary>
         /// Control LabelMessage.
         /// </summary>
         /// <remarks>
@@ -51,6 +42,15 @@ namespace WebAppPersonas
         protected global::System.Web.UI.WebControls.TextBox TextBoxIdentidad;
 
         /// <summary>
+        /// Control Identidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Identidad;
+
+        /// <summary>
         /// Control TextBoxNombres.
         /// </summary>
         /// <remarks>
@@ -58,6 +58,15 @@ namespace WebAppPersonas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxNombres;
+
+        /// <summary>
+        /// Control Nombres.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Nombres;
 
         /// <summary>
         /// Control TextBoxApellidos.
@@ -69,6 +78,15 @@ namespace WebAppPersonas
         protected global::System.Web.UI.WebControls.TextBox TextBoxApellidos;
 
         /// <summary>
+        /// Control Apellidos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Apellidos;
+
+        /// <summary>
         /// Control TextBoxFecha.
         /// </summary>
         /// <remarks>
@@ -76,6 +94,15 @@ namespace WebAppPersonas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxFecha;
+
+        /// <summary>
+        /// Control Fecha.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator Fecha;
 
         /// <summary>
         /// Control Button1.

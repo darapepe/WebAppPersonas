@@ -9,74 +9,56 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="text-align: center">
             <center>
-                <table width="70%" cellpadding="0" cellspacing="0" style="border: solid 1px #3366CC;">
+                <table width="40%" cellpadding="0" cellspacing="0" style="border: solid 1px #3366CC;">
                     <tr>
                         <td colspan="4" style="height: 30px; background-color: #77BFFC;">
-                            <span class="TextTitle" style="color: #FFFFFF;">Formulario de registro de Personas</span>
+                            <center><span style="color: #FFFFFF; vertical-align: middle; display: inline-block"><b>Formulario de registro de Personas</b></span></center>
                         </td>
                     </tr>
                     <tr>
-                        <td height="20px" colspan="0"></td>
+                        <td align="center">
+                            <asp:Label ID="LabelMessage" ForeColor="Red" runat="server" EnableViewState="False" Visible="False"></asp:Label>
+                            <br /><br />
+                        </td>
                     </tr>
-                    <tr>
-                        <td width="50%" valign="top">
-                            <table id="TableLogin" cellpadding="4" cellspacing="4"
-                                runat="server" width="100%">
-                                <tr>
-                                    <td colspan="3" align="center">
-                                        <asp:Label ID="LabelMessage" ForeColor="Red" runat="server" EnableViewState="False"
-                                            Visible="False"></asp:Label><br>
-                                    </td>
-                                </tr>
-                                <tr style="font-weight: normal; color: #000000">
-                                    <td align="right">
-                                        <span>Documento Identidad:</span>;  
-                                    </td>
-                                    <td align="left" style="padding-left: 10px;">
-                                        <asp:TextBox ID="TextBoxIdentidad" runat="server" Width="262px"
-                                            MaxLength="50" Height="34px"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right">
-                                        <span class="TextTitle">Nombres:</span>
-                                    </td>
-                                    <td align="left" style="padding-left: 10px;">
-                                        <asp:TextBox ID="TextBoxNombres" runat="server" Width="261px"
-                                            MaxLength="50" Height="34px"></asp:TextBox>
-                                        <br />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right">
-                                        <span class="TextTitle">Apellidos:</span>
-                                    </td>
-                                    <td align="left" style="padding-left: 10px;">
-                                        <asp:TextBox ID="TextBoxApellidos" runat="server" Width="258px"
-                                            MaxLength="50" Height="34px"></asp:TextBox>
-                                        <br />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right">
-                                        <span class="TextTitle">Fecha Nacimiento:</span>
-                                    </td>
-                                    <td align="left" style="padding-left: 10px;">
-                                        <asp:TextBox ID="TextBoxFecha" runat="server" Width="258px"
-                                            MaxLength="50" Height="34px"></asp:TextBox>
-                                        <br />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right"></td>
-                                    <td align="left" style="padding-left: 10px;">
-                                        <asp:Button ID="Button1" runat="server" Text="Agregar" OnClick="Button1_Click" Width="87px" />
-                                        <br />
-                                    </td>
-                                </tr>
-                            </table>
+                    <tr style="font-weight: normal; color: #000000">                        
+                        <td align="left" style="padding-left: 10px;">
+                            <span><b>Documento Identidad:</b></span>
+                            <asp:TextBox ID="TextBoxIdentidad" runat="server" Width="258px" MaxLength="15" Height="34px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Identidad" runat="server" ControlToValidate="TextBoxIdentidad" ErrorMessage="Este valor es requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br /><br />
+                        </td>
+                    </tr>
+                    <tr>                      
+                        <td align="left" style="padding-left: 10px;">
+                            <span><b>Nombres:</b></span>
+                            <asp:TextBox ID="TextBoxNombres" runat="server" MaxLength="80" Width="258px" Height="34px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Nombres" runat="server" ControlToValidate="TextBoxNombres" ErrorMessage="Este valor es requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br /><br />
+                        </td>
+                    </tr>
+                    <tr>                       
+                        <td align="left" style="padding-left: 10px;">
+                            <span><b>Apellidos:</b></span>
+                            <asp:TextBox ID="TextBoxApellidos" runat="server" Width="258px" MaxLength="80" Height="34px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Apellidos" runat="server" ControlToValidate="TextBoxApellidos" ErrorMessage="Este valor es requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br /><br />
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td align="left" style="padding-left: 10px;">
+                             <span><b>Fecha Nacimiento:</b></span>
+                            <asp:TextBox ID="TextBoxFecha"  runat="server" Width="258px" MaxLength="10" Height="34px"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="Fecha" runat="server" ControlToValidate="TextBoxFecha" ErrorMessage="Este valor es requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br /><br /><br />
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td align="left" style="padding-left: 10px;">
+                            <asp:Button ID="Button1" runat="server" Text="Agregar Persona" OnClick="Button1_Click" Width="150px" />
+                            <br /><br />
                         </td>
                     </tr>
                 </table>
