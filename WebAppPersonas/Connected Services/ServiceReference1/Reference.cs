@@ -87,6 +87,12 @@ namespace WebAppPersonas.ServiceReference1 {
         private string ApellidoPersonField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CorreoPersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DireccionPersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IdentidadPersonField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -94,6 +100,15 @@ namespace WebAppPersonas.ServiceReference1 {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NombrePersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TelefonoPersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoDireccionPersonField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TipoTelefonoPersonField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -114,6 +129,32 @@ namespace WebAppPersonas.ServiceReference1 {
                 if ((object.ReferenceEquals(this.ApellidoPersonField, value) != true)) {
                     this.ApellidoPersonField = value;
                     this.RaisePropertyChanged("ApellidoPerson");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CorreoPerson {
+            get {
+                return this.CorreoPersonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CorreoPersonField, value) != true)) {
+                    this.CorreoPersonField = value;
+                    this.RaisePropertyChanged("CorreoPerson");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DireccionPerson {
+            get {
+                return this.DireccionPersonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DireccionPersonField, value) != true)) {
+                    this.DireccionPersonField = value;
+                    this.RaisePropertyChanged("DireccionPerson");
                 }
             }
         }
@@ -157,6 +198,45 @@ namespace WebAppPersonas.ServiceReference1 {
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TelefonoPerson {
+            get {
+                return this.TelefonoPersonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TelefonoPersonField, value) != true)) {
+                    this.TelefonoPersonField = value;
+                    this.RaisePropertyChanged("TelefonoPerson");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoDireccionPerson {
+            get {
+                return this.TipoDireccionPersonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoDireccionPersonField, value) != true)) {
+                    this.TipoDireccionPersonField = value;
+                    this.RaisePropertyChanged("TipoDireccionPerson");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TipoTelefonoPerson {
+            get {
+                return this.TipoTelefonoPersonField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TipoTelefonoPersonField, value) != true)) {
+                    this.TipoTelefonoPersonField = value;
+                    this.RaisePropertyChanged("TipoTelefonoPerson");
+                }
+            }
+        }
+        
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -182,6 +262,12 @@ namespace WebAppPersonas.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<WebAppPersonas.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WebAppPersonas.ServiceReference1.CompositeType composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPersonRecords", ReplyAction="http://tempuri.org/IService1/GetPersonRecordsResponse")]
+        System.Data.DataSet GetPersonRecords();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPersonRecords", ReplyAction="http://tempuri.org/IService1/GetPersonRecordsResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetPersonRecordsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPersondetails", ReplyAction="http://tempuri.org/IService1/InsertPersondetailsResponse")]
         string InsertPersondetails(WebAppPersonas.ServiceReference1.PersonsDetails persons);
@@ -231,6 +317,14 @@ namespace WebAppPersonas.ServiceReference1 {
         
         public System.Threading.Tasks.Task<WebAppPersonas.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(WebAppPersonas.ServiceReference1.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
+        }
+        
+        public System.Data.DataSet GetPersonRecords() {
+            return base.Channel.GetPersonRecords();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetPersonRecordsAsync() {
+            return base.Channel.GetPersonRecordsAsync();
         }
         
         public string InsertPersondetails(WebAppPersonas.ServiceReference1.PersonsDetails persons) {

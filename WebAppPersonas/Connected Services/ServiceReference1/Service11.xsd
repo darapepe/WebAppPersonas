@@ -10,9 +10,14 @@
   <xs:complexType name="PersonsDetails">
     <xs:sequence>
       <xs:element minOccurs="0" name="ApellidoPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CorreoPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DireccionPerson" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="IdentidadPerson" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="NacimientoPerson" type="xs:dateTime" />
       <xs:element minOccurs="0" name="NombrePerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TelefonoPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDireccionPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoTelefonoPerson" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PersonsDetails" nillable="true" type="tns:PersonsDetails" />

@@ -52,13 +52,92 @@
                              <span><b>Fecha Nacimiento:</b></span>
                             <asp:TextBox ID="TextBoxFecha"  runat="server" Width="258px" MaxLength="10" Height="34px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="Fecha" runat="server" ControlToValidate="TextBoxFecha" ErrorMessage="Este valor es requerido" ForeColor="Red"></asp:RequiredFieldValidator>
-                            <br /><br /><br />
+                            <br /><br />
                         </td>
                     </tr>
                     <tr>                        
                         <td align="left" style="padding-left: 10px;">
+                            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                            <script type="text/javascript">                                
+                                $(document).ready(function () {
+                                    $('.add_address').click(function () {
+                                        $('p.address:last').after('<p class="address">' + $('p.address').html() + '</p>');
+                                    });
+                                });
+                            </script>
+                            <p class="address">
+                                <span><b>Direccion Fisica:</b></span>
+                            <asp:TextBox ID="TextBoxDir" runat="server" Width="258px" MaxLength="150" Height="34px"></asp:TextBox>
+                                <select id="tipoAddress" name="tipoAddress[]" runat="server">
+                                    <option value="Casa">Casa</option>                                    
+                                    <option value="Oficina">Oficina</option>
+                                </select>                                
+                            </p>
+                            <a href="javascript:void(0);" class="add_address">Agregar Direccion</a>
+                            <br />
+                            <br />
+                            <br />                            
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td align="left" style="padding-left: 10px;">
+                            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                            <script type="text/javascript">                                
+                                $(document).ready(function () {
+                                    $('.add_addressMail').click(function () {
+                                        $('p.addressMail:last').after('<p class="addressMail">' + $('p.addressMail').html() + '</p>');
+                                    });
+                                });
+                            </script>
+                            <p class="addressMail">
+                                <span><b>Correo Electronico:</b></span>
+                            <asp:TextBox ID="TextBoxCorreo" runat="server" Width="258px" MaxLength="150" Height="34px"></asp:TextBox>                                                            
+                            </p>
+                            <a href="javascript:void(0);" class="add_addressMail">Agregar Correo</a>
+                            <br />
+                            <br />
+                            <br />                            
+                        </td>
+                    </tr>
+                    <tr>                        
+                        <td align="left" style="padding-left: 10px;">
+                            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                            <script type="text/javascript">                                
+                                $(document).ready(function () {
+                                    $('.add_phone').click(function () {
+                                    $('p.number:last').after('<p class="number">' + $('p.number').html() + '</p>');
+                                    });
+                                });
+                            </script>
+                            <p class="number">
+                                <span><b>Telefonos:</b></span>
+                            <asp:TextBox ID="TextBoxTel" runat="server" Width="258px" MaxLength="10" Height="34px"></asp:TextBox>
+                                <select id="tipo" name="tipo[]" runat="server">
+                                    <option value="Casa">Casa</option>
+                                    <option value="Celular">Celular</option>
+                                    <option value="Oficina">Oficina</option>
+                                </select>                                
+                            </p>
+                            <a href="javascript:void(0);" class="add_phone">Agregar Telefono</a>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Label ID="Label1" runat="server" Text="" ForeColor="Red"></asp:Label>
+                        </td>
+                    </tr>
+
+                    <tr>                        
+                        <td align="left" style="padding-left: 10px;">
                             <asp:Button ID="Button1" runat="server" Text="Agregar Persona" OnClick="Button1_Click" Width="150px" />
                             <br /><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:GridView ID="grdPersonas" runat="server">
+                                <AlternatingRowStyle BackColor="White" />
+                                <HeaderStyle BackColor="#003300" Font-Bold="True" ForeColor="White" />
+                            </asp:GridView>
                         </td>
                     </tr>
                 </table>
