@@ -1,0 +1,40 @@
+﻿body {
+    width: 100%;
+    margin: 0;
+    color: #6a6f8c;
+    background: #c8c8c8;
+    font: 600 16px/18px 'Open Sans',sans-serif;    
+}
+
+.form-wrap {
+    width: 100%;
+    margin: auto;
+    max-width: 625px;
+    min-height: 470px;
+    position: relative;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+    background: linear-gradient(0deg, rgba(218,221,224,1) 0%, rgba(217,236,251,1) 100%) no-repeat;
+    padding: 90px 70px 50px 70px;
+}
+
+    .form-wrap .button {
+        border: none;
+        padding: 15px 20px;
+        border-radius: 25px;
+        background: #77BFFC;        
+    }
+
+.button:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;    
+    color: #2C3E50;
+    font-size: 17px;
+}

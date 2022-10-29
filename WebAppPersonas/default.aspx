@@ -5,13 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Darwin Perez Perez</title>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:600'>
+    <link rel="stylesheet" href="StyleSheet1.css">
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="text-align: center">
+        <div class="form-wrap">
             <center>
-                <table width="40%" cellpadding="0" cellspacing="0" style="border: solid 1px #3366CC;">
+                <table width="90%" cellpadding="0" cellspacing="0" style="border: solid 1px #3366CC;">
                     <tr>
                         <td colspan="4" style="height: 30px; background-color: #77BFFC;">
                             <center><span style="color: #FFFFFF; vertical-align: middle; display: inline-block"><b>Formulario de registro de Personas</b></span></center>
@@ -26,7 +28,7 @@
                     <tr style="font-weight: normal; color: #000000">                        
                         <td align="left" style="padding-left: 10px;">
                             <span><b>Documento Identidad:</b></span>
-                            <asp:TextBox ID="TextBoxIdentidad" runat="server" Width="258px" MaxLength="15" Height="34px"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxIdentidad" runat="server" Width="258px" MaxLength="15" Height="34px" placeholder="Identidad"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="Identidad" runat="server" ControlToValidate="TextBoxIdentidad" ErrorMessage="Este valor es requerido" ForeColor="Red"></asp:RequiredFieldValidator>
                             <br /><br />
                         </td>
@@ -128,7 +130,7 @@
 
                     <tr>                        
                         <td align="left" style="padding-left: 10px;">
-                            <asp:Button ID="Button1" runat="server" Text="Agregar Persona" OnClick="Button1_Click" Width="150px" />
+                            <asp:Button ID="Button1" runat="server" Text="Agregar Persona" OnClick="Button1_Click" class="button"/>
                             <br /><br />
                         </td>
                     </tr>

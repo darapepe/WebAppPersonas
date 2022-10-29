@@ -18,55 +18,15 @@ namespace WebAppPersonas
         {
             if (!Page.IsPostBack)
             {
-                DataSet ds = new DataSet();
-                ServiceReference1.Service1Client personas = new ServiceReference1.Service1Client();
-                ds = personas.GetPersonRecords();
-                grdPersonas.DataSource = ds;
-                grdPersonas.DataBind();
+                Load_Data();
             }
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int verificador = 0;
-            bool resultNom = Regex.IsMatch(TextBoxNombres.Text, @"^[a-zA-Z]+$");
-            bool resultIdentidad = Regex.IsMatch(TextBoxIdentidad.Text, @"^[a-zA-Z_0-9]+$");
-            if (!resultNom)
-            {
-                verificador = 1;
-                Label1.Text = "El campo Nombres no puede tener valores numericos" + "<br/>";
-                TextBoxTel.Text = "";
-            }
-            if (!resultIdentidad)
-            {
-                verificador = 1;
-                Label1.Text = Label1.Text + "El campo Documento Identidad debe ser alfanumericos" + "<br/>";
-                TextBoxTel.Text = "";
-            }
-            if (TextBoxDir.Text == "" && TextBoxCorreo.Text == "")
-            {
-                verificador = 1;
-                Label1.Text = Label1.Text + "Se debe ingresar al menos una direccion fisica o un correo electronico" + "<br/>";
-                TextBoxTel.Text = "";
-            }
+            bool verificarForm = Verified_Form();
+            
 
-            string[] telefonosList = TextBoxTel.Text.Split(',');
-            string[] direccionesList = TextBoxDir.Text.Split(',');
-            string[] correosList = TextBoxCorreo.Text.Split(',');
-
-            if (correosList.Length > 2)
-            {
-                Label1.Text = Label1.Text + "Solo se almacenaran 2 correos electronicos" + "<br/>";
-            }
-            if (direccionesList.Length > 2)
-            {
-                Label1.Text = Label1.Text + "Solo se almacenaran 2 direcciones fisicas" + "<br/>";
-            }
-            if (telefonosList.Length > 2)
-            {
-                Label1.Text = Label1.Text + "Solo se almacenaran 2 numeros de telefonos" + "<br/>";
-            }
-
-            if (verificador == 0)
+            if (verificarForm)
             {
                 try
                 {
@@ -91,17 +51,79 @@ namespace WebAppPersonas
                     TextBoxDir.Text = "";
                     TextBoxCorreo.Text = "";
                     Label1.Text = "";
-                    DataSet ds = new DataSet();
-                    ServiceReference1.Service1Client personas = new ServiceReference1.Service1Client();
-                    ds = personas.GetPersonRecords();
-                    grdPersonas.DataSource = ds;
-                    grdPersonas.DataBind();
+                    Load_Data();
                 }
                 catch (Exception ex)
                 {
                     Label1.Text = "Se presento el siguiente error: " + ex.Message;
                 }
             }
+        }
+
+        private void Load_Data()
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                ServiceReference1.Service1Client personas = new ServiceReference1.Service1Client();
+                ds = personas.GetPersonRecords();
+                grdPersonas.DataSource = ds;
+                grdPersonas.DataBind();
+            }
+            catch (Exception ex)
+            {
+                TextBoxIdentidad.Enabled = false;
+                TextBoxNombres.Enabled = false;
+                TextBoxApellidos.Enabled = false;
+                TextBoxFecha.Enabled = false;
+                TextBoxTel.Enabled = false;
+                TextBoxDir.Enabled = false;
+                TextBoxCorreo.Enabled = false;
+                //Button1.Enabled = false;                
+                Label1.Text = "Se presento error en la comunicacion con el service: " + ex.Message;
+            }            
+        }
+
+        public bool Verified_Form() {
+            bool verificador = true;
+            bool resultNom = Regex.IsMatch(TextBoxNombres.Text, @"^[a-zA-Z]+$");
+            bool resultIdentidad = Regex.IsMatch(TextBoxIdentidad.Text, @"^[a-zA-Z_0-9]+$");
+            if (!resultNom)
+            {
+                verificador = false;
+                Label1.Text = "El campo Nombres no puede tener valores numericos" + "<br/>";
+                TextBoxTel.Text = "";
+            }
+            if (!resultIdentidad)
+            {
+                verificador = false;
+                Label1.Text = Label1.Text + "El campo Documento Identidad debe ser alfanumericos" + "<br/>";
+                TextBoxTel.Text = "";
+            }
+            if (TextBoxDir.Text == "" && TextBoxCorreo.Text == "")
+            {
+                verificador = false;
+                Label1.Text = Label1.Text + "Se debe ingresar al menos una direccion fisica o un correo electronico" + "<br/>";
+                TextBoxTel.Text = "";
+            }
+
+            string[] telefonosList = TextBoxTel.Text.Split(',');
+            string[] direccionesList = TextBoxDir.Text.Split(',');
+            string[] correosList = TextBoxCorreo.Text.Split(',');
+
+            if (correosList.Length > 2)
+            {
+                Label1.Text = Label1.Text + "Solo se almacenaran 2 correos electronicos" + "<br/>";
+            }
+            if (direccionesList.Length > 2)
+            {
+                Label1.Text = Label1.Text + "Solo se almacenaran 2 direcciones fisicas" + "<br/>";
+            }
+            if (telefonosList.Length > 2)
+            {
+                Label1.Text = Label1.Text + "Solo se almacenaran 2 numeros de telefonos" + "<br/>";
+            }
+            return verificador;
         }
     }
 }
