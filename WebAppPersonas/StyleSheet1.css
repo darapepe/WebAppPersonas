@@ -3,30 +3,36 @@
     margin: 0;
     color: #6a6f8c;
     background: #c8c8c8;
-    font: 600 16px/18px 'Open Sans',sans-serif;    
+    font: 600 16px/18px 'Open Sans',sans-serif;
+    padding-top: 10px;
 }
 
 .form-wrap {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin: auto;
-    max-width: 625px;
+    max-width: 1025px;
     min-height: 470px;
     position: relative;
     box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
     background: linear-gradient(0deg, rgba(218,221,224,1) 0%, rgba(217,236,251,1) 100%) no-repeat;
-    padding: 90px 70px 50px 70px;
 }
 
-    .form-wrap .button {
-        border: none;
-        padding: 15px 20px;
-        border-radius: 25px;
-        background: #77BFFC;        
+table {
+    align-self: center;
+}
+
+.button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: #77BFFC;
+}
+
+    .button:hover {
+        box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
     }
-
-.button:hover {
-    box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
-}
 
 input {
     padding: 15px;
@@ -34,7 +40,22 @@ input {
     border-radius: 3px;
     margin-bottom: 10px;
     width: 100%;
-    box-sizing: border-box;    
+    box-sizing: border-box;
     color: #2C3E50;
     font-size: 17px;
+}
+
+.mGrid {
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+}
+
+select {
+    background: transparent;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    height: 30px;
+    padding: 5px;
+    width: 150px;
 }

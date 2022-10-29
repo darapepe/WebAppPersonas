@@ -19,15 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:60985/Service1.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://apppersonas20221029105518.azurewebsites.net/service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="64bfbb33-6c4e-4bb5-8c01-4cb4bf6316eb" SourceId="1" SourceUrl="http://localhost:60985/Service1.svc?xsd=xsd0" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="9cdb0b40-d05e-4d56-9352-4cd35f08d83d" SourceId="1" SourceUrl="http://localhost:60985/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="33b87da9-ce83-484c-9a3b-e2372710ec62" SourceId="1" SourceUrl="http://localhost:60985/Service1.svc?disco" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="e2753075-dbd6-43fb-97d6-bf43db67ce73" SourceId="1" SourceUrl="http://localhost:60985/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="b77933cd-612d-4dc1-83eb-37057923e32b" SourceId="1" SourceUrl="http://localhost:60985/Service1.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="e5427c35-c790-42e1-aa51-580cf40cdc28" SourceId="1" SourceUrl="http://localhost:60985/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="0f1456be-9547-499a-925d-dac4a82bb39c" SourceId="1" SourceUrl="https://apppersonas20221029105518.azurewebsites.net/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service141.xsd" MetadataType="Schema" ID="02dd44fe-0a7b-4e41-8f42-24485414a8f1" SourceId="1" SourceUrl="https://apppersonas20221029105518.azurewebsites.net/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service142.xsd" MetadataType="Schema" ID="2ef12643-cdaf-4259-a46e-be1519728fa1" SourceId="1" SourceUrl="https://apppersonas20221029105518.azurewebsites.net/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service11.disco" MetadataType="Disco" ID="15789653-abc6-466d-a593-01c580bc5ae2" SourceId="1" SourceUrl="https://apppersonas20221029105518.azurewebsites.net/Service1.svc?disco" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="166f945c-c2af-49e6-b25b-57cd3aee8d1b" SourceId="1" SourceUrl="https://apppersonas20221029105518.azurewebsites.net/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service143.xsd" MetadataType="Schema" ID="8d31de82-7dc4-416c-96e5-1038cf8fff36" SourceId="1" SourceUrl="https://apppersonas20221029105518.azurewebsites.net/Service1.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -13,7 +13,8 @@ namespace WebAppPersonas
 {
     public partial class _default : System.Web.UI.Page
     {
-        ServiceReference1.Service1Client objServiceClient = new ServiceReference1.Service1Client();
+        //ServiceReference1.Service1Client objServiceClient = new ServiceReference1.Service1Client();
+        Service1Client objServiceClient = new Service1Client();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)

@@ -11,9 +11,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="form-wrap">
-            <center>
-                <table width="90%" cellpadding="0" cellspacing="0" style="border: solid 1px #3366CC;">
+        <div class="form-wrap">         
+                <table width="40%" cellpadding="0" cellspacing="0" style="border: solid 1px #3366CC;">
                     <tr>
                         <td colspan="4" style="height: 30px; background-color: #77BFFC;">
                             <center><span style="color: #FFFFFF; vertical-align: middle; display: inline-block"><b>Formulario de registro de Personas</b></span></center>
@@ -28,12 +27,12 @@
                     <tr style="font-weight: normal; color: #000000">                        
                         <td align="left" style="padding-left: 10px;">
                             <span><b>Documento Identidad:</b></span>
-                            <asp:TextBox ID="TextBoxIdentidad" runat="server" Width="258px" MaxLength="15" Height="34px" placeholder="Identidad"></asp:TextBox>
+                            <asp:TextBox ID="TextBoxIdentidad" runat="server" Width="258px" MaxLength="15" Height="34px"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="Identidad" runat="server" ControlToValidate="TextBoxIdentidad" ErrorMessage="Este valor es requerido" ForeColor="Red"></asp:RequiredFieldValidator>
                             <br /><br />
                         </td>
                     </tr>
-                    <tr>                      
+                    <tr style="font-weight: normal; color: #000000">                      
                         <td align="left" style="padding-left: 10px;">
                             <span><b>Nombres:</b></span>
                             <asp:TextBox ID="TextBoxNombres" runat="server" MaxLength="80" Width="258px" Height="34px"></asp:TextBox>
@@ -41,7 +40,7 @@
                             <br /><br />
                         </td>
                     </tr>
-                    <tr>                       
+                    <tr style="font-weight: normal; color: #000000">                       
                         <td align="left" style="padding-left: 10px;">
                             <span><b>Apellidos:</b></span>
                             <asp:TextBox ID="TextBoxApellidos" runat="server" Width="258px" MaxLength="80" Height="34px"></asp:TextBox>
@@ -49,7 +48,7 @@
                             <br /><br />
                         </td>
                     </tr>
-                    <tr>                        
+                    <tr style="font-weight: normal; color: #000000">                        
                         <td align="left" style="padding-left: 10px;">
                              <span><b>Fecha Nacimiento:</b></span>
                             <asp:TextBox ID="TextBoxFecha"  runat="server" Width="258px" MaxLength="10" Height="34px"></asp:TextBox>
@@ -57,7 +56,7 @@
                             <br /><br />
                         </td>
                     </tr>
-                    <tr>                        
+                    <tr style="font-weight: normal; color: #000000">                        
                         <td align="left" style="padding-left: 10px;">
                             <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
                             <script type="text/javascript">                                
@@ -81,7 +80,7 @@
                             <br />                            
                         </td>
                     </tr>
-                    <tr>                        
+                    <tr style="font-weight: normal; color: #000000">                        
                         <td align="left" style="padding-left: 10px;">
                             <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
                             <script type="text/javascript">                                
@@ -101,7 +100,7 @@
                             <br />                            
                         </td>
                     </tr>
-                    <tr>                        
+                    <tr style="font-weight: normal; color: #000000">                        
                         <td align="left" style="padding-left: 10px;">
                             <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
                             <script type="text/javascript">                                
@@ -128,22 +127,21 @@
                         </td>
                     </tr>
 
-                    <tr>                        
-                        <td align="left" style="padding-left: 10px;">
+                    <tr style="font-weight: normal; color: #000000">                        
+                        <td align="left" style="padding-left: 10px; padding-right: 10px;">
                             <asp:Button ID="Button1" runat="server" Text="Agregar Persona" OnClick="Button1_Click" class="button"/>
                             <br /><br />
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <asp:GridView ID="grdPersonas" runat="server">
+                        <td align="left" style="padding-left: 10px; padding-right: 10px;">
+                            <asp:GridView ID="grdPersonas" runat="server" CssClass="mGrid">
                                 <AlternatingRowStyle BackColor="White" />
                                 <HeaderStyle BackColor="#003300" Font-Bold="True" ForeColor="White" />
                             </asp:GridView>
                         </td>
                     </tr>
-                </table>
-            </center>            
+                </table>                       
         </div>
     </form>
 </body>
